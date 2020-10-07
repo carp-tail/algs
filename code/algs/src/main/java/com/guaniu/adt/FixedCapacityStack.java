@@ -1,9 +1,9 @@
-package com.guaniu.api;
+package com.guaniu.adt;
 
 
 /**
  * 数组实现的固定初始化容量的栈
- * @param <T>
+ * @param <T> 参数化类型
  */
 
 public class FixedCapacityStack<T> {
@@ -34,7 +34,7 @@ public class FixedCapacityStack<T> {
             throw new ArrayIndexOutOfBoundsException();
         }
         T top = arr[--size];
-        arr[--size] = null; // 避免对象游离
+        arr[size + 1] = null; // 避免对象游离
         return top;
     }
 
@@ -51,6 +51,14 @@ public class FixedCapacityStack<T> {
      */
     public boolean isEmpty(){
         return size == 0;
+    }
+
+    /**
+     * 栈是否已满
+     * @return
+     */
+    public boolean isFull(){
+        return size == arr.length;
     }
 
 }

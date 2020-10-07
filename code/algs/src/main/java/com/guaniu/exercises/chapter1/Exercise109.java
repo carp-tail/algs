@@ -1,6 +1,6 @@
 package com.guaniu.exercises.chapter1;
 
-public class Exercise09 {
+public class Exercise109 {
     public static void main(String[] args){
         System.out.println(decimalToBinary(3029737));
     }

@@ -1,4 +1,4 @@
-package com.guaniu.common;
+package com.guaniu.api;
 
 public class Utils {
     /**
